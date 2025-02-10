@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Reparto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Reparto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let actor of cast()">
+      <ion-thumbnail slot="start">
+        <img [src]="actor.profilePath" alt="{{ actor.name }}" *ngIf="actor.profilePath; else noImage"/>
+        <ng-template #noImage>
+          <img src="assets/no-profile.jpg" alt="No image available">
+        </ng-template>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ actor.name }}</h2>
+        <p>{{ actor.character }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

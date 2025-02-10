@@ -1,0 +1,19 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .error-msg {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,7 @@
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; // Espacio entre las tarjetas
+  padding: 20px;
+}

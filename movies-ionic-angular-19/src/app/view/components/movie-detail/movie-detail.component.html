@@ -1,0 +1,11 @@
+<ion-card *ngIf="movie">
+  <ion-img [src]="movie.backdropPath" alt="Imagen de {{ movie.title }}"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ movie.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>{{ movie.overview }}</p>
+    <p><strong>Fecha de estreno:</strong> {{ movie.releaseDate }}</p>
+    <p><strong>Puntuación:</strong> {{ movie.voteAverage }} ⭐</p>
+  </ion-card-content>
+</ion-card>

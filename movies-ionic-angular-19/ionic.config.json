@@ -1,0 +1,7 @@
+{
+  "name": "movies-ionic-angular-18",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,9 @@
+<ion-card (click)="goToDetails()">
+  <ion-img [src]="movie.posterPath" alt="{{ movie.title }}"></ion-img>
+  <ion-card-header>
+    <ion-card-title>{{ movie.title }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p>📅 {{ movie.releaseDate }}</p>
+  </ion-card-content>
+</ion-card>

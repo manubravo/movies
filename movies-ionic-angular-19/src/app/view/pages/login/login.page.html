@@ -1,0 +1,32 @@
+<ion-content>
+  <div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      @if (loginForm.controls['email'].invalid && loginForm.controls['email'].touched) {
+        <p class="error-msg">Ingrese un correo válido</p>
+      }
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      @if (loginForm.controls['password'].invalid && loginForm.controls['password'].touched) {
+        <p class="error-msg">Mínimo 6 caracteres</p>
+      }
+
+      <ion-button expand="full" type="submit" [disabled]="loginForm.invalid">
+        Iniciar sesión
+      </ion-button>
+
+      <p>
+        ¿No tienes cuenta?
+        <ion-text color="primary" (click)="goToRegister()">Regístrate aquí</ion-text>
+      </p>
+      
+    </form>
+  </div>
+</ion-content>

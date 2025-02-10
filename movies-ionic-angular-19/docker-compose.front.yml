@@ -1,0 +1,20 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+    container_name: movies_frontend
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${FRONT_PORT}:8100"
+    networks:
+      - movies_network
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+networks:
+  movies_network:
+    external: true  # Ensures using the existing backend network
