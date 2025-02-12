@@ -2,7 +2,7 @@ include .env
 export $(shell sed 's/=.*//' .env)
 
 updev:
-	docker compose -f docker-compose.dev.yml up -d --no-deps backend
+	docker compose -f docker-compose.dev.yml up -d --build
 
 dev:
 	docker compose -f docker-compose.dev.yml up -d --build
