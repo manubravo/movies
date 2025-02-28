@@ -56,7 +56,3 @@ make app
 - **Make sure Docker is running** before executing the commands.
 - If you're using a different backend host (e.g., cloud service), update `VITE_BACKEND_URL` in `environment.ts`.
 - In the Makefile, you have additional commands to manage the backend and frontend services. The backend does not depend on the frontend, but the frontend depends on the backend. Therefore, you will always need the backend running if you want to use the frontend. However, you do not need to start the frontend if you only want to use the backend.
-
----
-Everything is set! 🚀 Enjoy the app!
-
