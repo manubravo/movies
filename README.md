@@ -1,4 +1,9 @@
 # Movie App - Setup Guide
+This is a basic application where I showcase how I usually work. The entire application runs with a single command:
+```sh
+make app
+```
+as long as you follow the instructions below.
 
 ## Prerequisites
 Before running the application, ensure you have the following installed:
